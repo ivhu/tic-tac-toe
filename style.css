@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    --width: 190px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 25px;
+    font-family: 'Lora', sans-serif;
+}
+
+.header {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header, .settings, .play {
+    margin-left: 30px;
+}
+
+.labels {
+    display: grid;
+    grid-template-columns: 100px 230px;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, var(--width));
+    grid-template-rows: repeat(3, var(--width));
+    border: 0.5px solid black;
+    width: calc(var(--width) * 3);
+    height: calc(var(--width) * 3);
+}
+
+.container {
+    align-self: center;
+    position: absolute;
+    margin-top: 60px;
+    
+}
+
+.cell {
+    width: var(--width);
+    height: var(--width);
+    border: 0.5px solid black;
+    background-color: white;
+    font-size: 100px;
+    font-family: 'Lora', sans-serif;
+    background-color: #fefce8;
+}
+
+.cell:hover:not([disabled]) {
+    filter: brightness(0.95);
+}
+
+.cell:disabled {
+    background-color: white;
+    color: black;
+    background-color: #fefce8;
+}
+
+.play {
+    width: 330px;
+    padding: 15px;
+    font-size: 28px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: none;
+
+}
+
+.play:hover {
+    filter: brightness(0.95);
+}
+
+.play:active {
+    box-shadow: 2px 2px 0px #f5d0fe;;
+}
+
+input {
+    padding: 10px;
+    font-size: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 20px;
+    
+}
+
+input, select {
+    border: none;
+    border-radius: 5px;
+}
+
+input, select, .play {
+    background-color: #fae8ff;
+    box-shadow: 3px 3px 0px #f5d0fe;
+    font-family: 'Lora', sans-serif;
+}
+
+.turn {
+    position: absolute;
+    margin-top: -40px;
+}
+
